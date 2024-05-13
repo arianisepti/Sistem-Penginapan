@@ -27,14 +27,24 @@
        </div> 
 
     <!-------------------- ------ Right Box ---------------------------->
-        
-       <form class="col-md-6 right-box" id="myForm" action="login.php" method="post">
+
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $item)
+                    <li>{{ $item }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+       <form class="col-md-6 right-box" id="myForm" action="" method="post">
+        @csrf
           <div class="row align-items-center">
                 <div class="header-text mb-4">
                      <p>Enjoy All Our Facility</p>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" id="username" name="username" placeholder="Email address/username">
+                    <input type="email" value="{{ old('email') }}" class="form-control form-control-lg bg-light fs-6" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="input-group mb-3">
                     <input type="password" class="form-control form-control-lg bg-light fs-6" id="password" name="password" placeholder="Password">

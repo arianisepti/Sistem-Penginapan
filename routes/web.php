@@ -12,3 +12,5 @@ Route::get('/login', [HomeController::class,"login"]);
 Route::get('/testi', [HomeController::class,"testi"]);
 
 Route::get('/con', [HomeController::class,"contact"]);
+
+Route::post('/login', [HomeController::class,"signin"]);

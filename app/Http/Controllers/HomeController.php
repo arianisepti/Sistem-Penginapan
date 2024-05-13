@@ -13,6 +13,7 @@ class HomeController extends Controller
         return view("about");
     }
     public function login(){
+       
         return view("login");
     }
     public function testi(){
@@ -20,5 +21,19 @@ class HomeController extends Controller
     }
     public function contact(){
         return view("contact");
+    }
+
+    public function signin(Request $request)
+    {
+        $request->validate(
+        [
+            'email' => 'required',
+            'password' => 'required'
+        ],
+        [
+            'email.required'=>'Email wajib diisi',
+            'password.required'=>'Password wajib diisi',
+        ],
+    );
     }
 }
