@@ -45,7 +45,7 @@ class HomeController extends Controller
     ];
 
     if(Auth::attempt($infologin)){
-        echo "sukses"; exit();
+        return view('client');
     }else{
         return redirect('/login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
     }
