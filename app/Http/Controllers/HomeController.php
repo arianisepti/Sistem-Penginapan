@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -29,7 +32,8 @@ class HomeController extends Controller
         $request->validate(
         [
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'role'=> 'required'
         ],
         [
             'email.required'=>'Email wajib diisi',
@@ -40,6 +44,7 @@ class HomeController extends Controller
     $infologin = [
         'email'=> $request->email,
         'password'=> $request->password,
+        'role'=> $request->role
 
 
     ];
@@ -56,5 +61,52 @@ class HomeController extends Controller
         Auth::logout();
         return redirect('');
 
+    }
+
+    public function register()
+    {
+        return view('register');
+    }
+    public function create(Request $request)
+    {
+        
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|min:6',
+                'role' => 'required'
+            ],
+            [
+                'name.required'=>'Nama wajib diisi',
+                'email.required'=>'Email wajib diisi',
+                'email.email'=>'Silakan masukkan email yang valid',
+                'email.unique'=>'Email sudah pernah digunakan',
+                'password.required'=>'Password wajib diisi',
+                'password.min'=>'Minimum password yang diizinkan adalah 6 karakter'
+            ]
+        );
+
+        $data = [
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>Hash::make($request->password),
+            'role'=>$request->role,
+        ];
+        User::create($data);
+      
+        $infologin = [
+            'email'=> $request->email,
+            'password'=> $request->password,
+    
+    
+        ];
+    
+        if(Auth::attempt($infologin)){
+            return redirect('/client');
+            
+        }else{
+            return redirect('login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
+        }
     }
 }

@@ -9,13 +9,17 @@ Route::middleware(['guest'])->group(function(){
 
     Route::get('/about', [HomeController::class,"about"]);
 
-    Route::get('/login', [HomeController::class,"login"]);
-
     Route::get('/testi', [HomeController::class,"testi"]);
 
     Route::get('/con', [HomeController::class,"contact"]);
 
+    Route::get('/login', [HomeController::class,"login"]);
+
     Route::post('/login', [HomeController::class,"signin"]);
+
+    Route::get('/register', [HomeController::class,"register"]);
+
+    Route::post('/create', [HomeController::class,"create"]);
 
 });
 
