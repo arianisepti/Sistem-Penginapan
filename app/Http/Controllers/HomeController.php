@@ -36,7 +36,7 @@ class HomeController extends Controller
             'password.required'=>'Password wajib diisi',
         ]
     );
-
+  
     $infologin = [
         'email'=> $request->email,
         'password'=> $request->password,
@@ -45,9 +45,16 @@ class HomeController extends Controller
     ];
 
     if(Auth::attempt($infologin)){
-        return view('client');
+        return redirect('/client');
     }else{
-        return redirect('/login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
+        return redirect('login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
     }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('');
+
     }
 }

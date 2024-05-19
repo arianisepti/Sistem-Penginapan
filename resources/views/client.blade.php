@@ -71,7 +71,7 @@
                 style="width: 30px; height: 30px"
               />
             </div>
-            <h1 class="m-0 text-danger">Foursen</h1>
+            <h1 class="m-0 text-danger">{{ auth()->user()->name }}</h1>
           </a>
           <button
             type="button"
@@ -1603,7 +1603,7 @@
               <h5 class="text-white mb-4">Newsletter</h5>
               <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
               <div class="position-relative mx-auto" style="max-width: 400px">
-                <a class="btn btn-primary py-3 px-5 mt-3" href="logout.php">Logout</a>
+                <a class="btn btn-primary py-3 px-5 mt-3" name="logout" href="logout">Logout</a>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@
     <!-------------------- ------ Right Box ---------------------------->
 
         
-       <form class="col-md-6 right-box" id="myForm" action="" method="post">
+       <form class="col-md-6 right-box" id="myForm" action="/login" method="post">
         @csrf
           <div class="row align-items-center">
                 <div class="header-text mb-4">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-primary w-100 fs-6"type="submit" name="login">Login</button>
+                    <button class="btn btn-lg btn-primary w-100 fs-6"type="submit" href=""name="login">Login</button>
                 </div>
                 <div class="input-group mb-3">
                     <button class="btn btn-lg btn-light w-100 fs-6"><img src="{{asset('Reservasi/img2/Logo/google.png')}}" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
