@@ -50,16 +50,21 @@ class HomeController extends Controller
     ];
 
     if(Auth::attempt($infologin)){
-        return redirect('/client');
+        if(Auth::user()->role=='client'){
+            return redirect('/client');
+        }else{
+            return redirect('/company');
+        }
+        
     }else{
-        return redirect('login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
+        return redirect('/login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
     }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('');
+        return redirect('/');
 
     }
 

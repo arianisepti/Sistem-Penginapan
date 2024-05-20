@@ -11,6 +11,11 @@ class ClientController extends Controller
     {
         return view('client');
         
-
+    }
+    function company()
+    {
+        echo "selamat datang COMPANY";
+        echo Auth()->user()->name;
+        
     }
 }
