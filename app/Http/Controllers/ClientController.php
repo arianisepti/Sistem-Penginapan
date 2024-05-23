@@ -14,8 +14,7 @@ class ClientController extends Controller
     }
     function company()
     {
-        echo "selamat datang COMPANY";
-        echo Auth()->user()->name;
+        return view('company');
         
     }
 }

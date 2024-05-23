@@ -29,6 +29,7 @@ class HomeController extends Controller
 
     public function signin(Request $request)
     {
+    
         $request->validate(
         [
             'email' => 'required',
@@ -108,7 +109,11 @@ class HomeController extends Controller
         ];
     
         if(Auth::attempt($infologin)){
-            return redirect('/client');
+            if(Auth::user()->role=='client'){
+                return redirect('/client');
+            }else{
+                return redirect('/company');
+            }
             
         }else{
             return redirect('login')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
