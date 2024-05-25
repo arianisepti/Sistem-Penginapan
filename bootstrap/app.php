@@ -4,6 +4,7 @@ use App\Http\Middleware\Authenticate;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Middleware\UserAkses;
 // use App\Http\Middleware\UserAkses;
 // use Illuminate\Routing\Router;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,9 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias([RedirectIfAuthenticated::class, 'guest']); // Menggunakan metode alias
+        // $middleware->alias([RedirectIfAuthenticated::class, 'guest']); // Menggunakan metode alias
         // $middleware->alias([Authenticate::class, 'Auth']); // Menggunakan metode alias
-        // $middleware->alias([UserAkses::class, 'UserAkses']); // Menggunakan metode alias
+        $middleware->alias([
+           'userAkses' => UserAkses::class,]); // Menggunakan metode alias
 
     })
     ->withExceptions(function (Exceptions $exceptions) {

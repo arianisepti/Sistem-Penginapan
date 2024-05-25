@@ -9,7 +9,6 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Kernel;
 
 
-// Route::middleware(['guest'])->group(function(){
 
     Route::get('/', [HomeController::class,"home"]);
     Route::get('/about', [HomeController::class,"about"]);
@@ -19,12 +18,12 @@ use App\Http\Kernel;
     Route::post('/login', [HomeController::class,"signin"]);
     Route::get('/register', [HomeController::class,"register"]);
     Route::post('/create', [HomeController::class,"create"]);
-// });
 
-// Route::middleware(['islogin'])->group(function(){
-    Route::get('/client', [ClientController::class, "client"])->middleware('auth');
-    Route::get('/company', [ClientController::class, "company"])->middleware('auth');
+
+
+    Route::get('/client', [ClientController::class, "client"])->middleware(['auth', 'userAkses:client']);
+    Route::get('/company', [ClientController::class, "company"])->middleware(['auth', 'userAkses::company']);
     Route::get('/logout', [HomeController::class, "logout"]);
 
-// });
+
 
