@@ -4,7 +4,6 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\UserAkses;
 use App\Http\Middleware\Authenticate;
 use App\Http\Kernel;
 
@@ -22,7 +21,7 @@ use App\Http\Kernel;
 
 
     Route::get('/client', [ClientController::class, "client"])->middleware(['auth', 'userAkses:client']);
-    Route::get('/company', [ClientController::class, "company"])->middleware(['auth', 'userAkses::company']);
+    Route::get('/company', [ClientController::class, "company"])->middleware(['auth', 'userAkses:company']);
     Route::get('/logout', [HomeController::class, "logout"]);
 
 

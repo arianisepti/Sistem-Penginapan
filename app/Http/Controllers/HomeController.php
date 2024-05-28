@@ -53,7 +53,7 @@ class HomeController extends Controller
     if(Auth::attempt($infologin)){
         if(Auth::user()->role=='client'){
             return redirect('/client');
-        }else{
+        }elseif(Auth::user()->role=='company'){
             return redirect('/company');
         }
         
@@ -104,6 +104,7 @@ class HomeController extends Controller
         $infologin = [
             'email'=> $request->email,
             'password'=> $request->password,
+            'role'=> $request->role
     
     
         ];
@@ -111,7 +112,7 @@ class HomeController extends Controller
         if(Auth::attempt($infologin)){
             if(Auth::user()->role=='client'){
                 return redirect('/client');
-            }else{
+            }elseif(Auth::user()->role=='company'){
                 return redirect('/company');
             }
             
