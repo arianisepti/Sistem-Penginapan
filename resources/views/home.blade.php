@@ -86,7 +86,7 @@
               <a href="/" class="nav-item nav-link active">Home</a>
               <a href="/about" class="nav-item nav-link">About</a>
               <a href="/login" class="nav-item nav-link">Login</a>
-              <!-- <div class="nav-item dropdown">
+              <div class="nav-item dropdown">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
@@ -104,7 +104,7 @@
                     >Property Agent</a
                   >
                 </div>
-              </div> -->
+              </div>
               <div class="nav-item dropdown">
                 <a
                   href="#"
