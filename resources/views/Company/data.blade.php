@@ -9,15 +9,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('Reservasi/img/favicon.ico') }}" rel="icon">
-    <!-- Boxicons -->
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -26,12 +24,11 @@
     <link href="{{asset('Reservasi/lib/animate/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('Reservasi/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
-   <!-- Customized Bootstrap Stylesheet -->
-   <link href="{{asset('Reservasi/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{asset('Reservasi/css/bootstrap.min.cs')}}s" rel="stylesheet">
 
-
-     <!-- Template Stylesheet -->
-	 <link href="{{asset('Reservasi/css/style.css')}}" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="{{asset('Reservasi/css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -59,28 +56,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Dashboard</a>
-                        <a href="about.html" class="nav-item nav-link">Konten</a>
-                        <a href="login.php" class="nav-item nav-link">Login</a>
+                        <a href="/" class="nav-item nav-link">Dashboard</a>
+                        <a href="/login" class="nav-item nav-link">Login</a>
 
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Order</a>
+                         <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Form</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Klien</a>
-                                <a href="property-type.html" class="dropdown-item">Partner</a>
-                                
+                                <a href="/partner" class="dropdown-item">Partner</a>
                             </div>
                         </div>
 
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Analisa</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Analisis</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item active">Data</a>
+                                <a href="/data" class="dropdown-item active">Data</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Pesan</a>
+                        <a href="/pesan" class="nav-item nav-link">Pesan</a>
                     </div>
-                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Setting</a>
                 </div>
             </nav>
         </div>
@@ -91,7 +85,7 @@
         <div class="container-fluid header bg-white p-0">
             <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
                 <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Analisis Data</h1> 
+                    <h1 class="display-5 animated fadeIn mb-4">Testimonial</h1>
                         <nav aria-label="breadcrumb animated fadeIn">
                         <ol class="breadcrumb text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -144,172 +138,10 @@
         <!-- Search End -->
 
 
-        <!-- Testimonial Start -->
-        <!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Kategori</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
-			<a href="#" class="profile">
-				<img src="{{ asset('Reservasi/img/people.png') }}">
-			</a>
-		</nav>
-		<!-- NAVBAR -->
-
-		<!-- MAIN -->
-		<main>
-			<div class="head-title">
-				<div class="left">
-					<h1>Riset Data</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Perhitungan</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">conclusion</a>
-						</li>
-					</ul>
-				</div>
-				<a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download Data</span>
-				</a>
-			</div>
-
-			<ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>1020</h3>
-						<p>Order</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>2834</h3>
-						<p>Pengunjung</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-dollar-circle' ></i>
-					<span class="text">
-						<h3>100 Jt</h3>
-						<p>Income</p>
-					</span>
-				</li>
-			</ul>
-
-
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Recent Orders</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>User Klien</th>
-								<th>Tanggal Order</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<img src="{{ asset('Reservasi/img/bhamada.png') }}">
-									<p>Isma</p>
-								</td>
-								<td>04-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('Reservasi/img/bhamada.png') }}">
-									<p>Dimas</p>
-								</td>
-								<td>10-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('Reservasi/img/bhamada.png') }}">
-									<p>Kara</p>
-								</td>
-								<td>07-10-2021</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('Reservasi/img/bhamada.png') }}">
-									<p>Janet</p>
-								</td>
-								<td>09-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="{{ asset('Reservasi/img/bhamada.png') }}">
-									<p>Andye</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Kerjaan</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>completed</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>completed</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Pending</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>completed</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Pending</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
-        <!-- Testimonial End -->
+        <!-- CONTENT Start -->
         
+        <!-- CONTENT End -->
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -339,22 +171,22 @@
                         <h5 class="text-white mb-4">Photo Gallery</h5>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-1.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-1.jpg')}}" alt="">
                             </div>
                             <div class="col-4">
-							<img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-2.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-2.jpg')}}" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-3.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-3.jpg')}}" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-4.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-4.jpg')}}" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-5.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-5.jpg')}}" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{{ asset('Reservasi/img/property-6.jpg') }}" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="{{asset('Reservasi/img/property-6.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -372,8 +204,8 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                         </div>
@@ -399,13 +231,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('Reservasi/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('Reservasi/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('Reservasi/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('Reservasi/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{asset('Reservasi/lib/wow/wow.min.js')}}"></script>
+    <script src="{{asset('Reservasi/lib/easing/easing.min.js')}}"></script>
+    <script src="{{asset('Reservasi/lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{asset('Reservasi/lib/owlcarousel/owl.carousel.min.js')}}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('Reservasi/js/main.js') }}"></script>
+    <script src="{{asset('Reservasi/js/main.js')}}"></script>
 </body>
 
 </html>
