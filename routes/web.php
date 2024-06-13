@@ -18,7 +18,7 @@ use App\Http\Kernel;
     Route::post('/login', [HomeController::class,"signin"]);
     Route::get('/register', [HomeController::class,"register"]);
     Route::post('/create', [HomeController::class,"create"]);
-
+    Route::get('/b', [HomeController::class,"book"]);
 
     
 
