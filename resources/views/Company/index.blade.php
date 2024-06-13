@@ -83,7 +83,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link active">Dashboard</a>
+              <a href="/" class="nav-item nav-link active">Dashboard</a>
               <a href="login.php" class="nav-item nav-link">Login</a>
 
               <div class="nav-item dropdown">
@@ -108,12 +108,12 @@
                   >Analisis</a
                 >
                 <div class="dropdown-menu rounded-0 m-0">
-                  <a href="/data" class="dropdown-item"
+                  <a href="Company.data" class="dropdown-item"
                     >Data</a
                   >
                 </div>
               </div>
-              <a href="/pesan" class="nav-item nav-link">Pesan</a>
+              <a href="Company.pesan" class="nav-item nav-link">Pesan</a>
             </div>
             <a href="" class="btn btn-primary px-3 d-none d-lg-flex"
               >Setting</a

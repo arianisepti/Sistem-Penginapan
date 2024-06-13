@@ -94,13 +94,13 @@
                   >Property</a
                 >
                 <div class="dropdown-menu rounded-0 m-0">
-                  <a href="property-list.html" class="dropdown-item"
+                  <a href="/property-list" class="dropdown-item"
                     >Property List</a
                   >
-                  <a href="property-type.html" class="dropdown-item"
+                  <a href="/property-type" class="dropdown-item"
                     >Property Type</a
                   >
-                  <a href="property-agent.html" class="dropdown-item"
+                  <a href="/property-agent" class="dropdown-item"
                     >Property Agent</a
                   >
                 </div>

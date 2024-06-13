@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('partners', function (Blueprint $table) {
+            $table->bigIncrements('id')->first();
             $table->string('nampart');
             $table->date('bkontrak');
             $table->string('alamat');
-            $table->integer('notel');
+            $table->bigInteger('notel');
             $table->timestamps();
         });
     }
