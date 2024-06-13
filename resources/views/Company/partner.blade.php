@@ -56,7 +56,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="/" class="nav-item nav-link">Dashboard</a>
+                        <a href="/company" class="nav-item nav-link">Dashboard</a>
                         <a href="/login" class="nav-item nav-link">Login</a>
 
                         <div class="nav-item dropdown">
@@ -68,11 +68,11 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Analisis</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/data" class="dropdown-item">Data</a>
+                                <a href="Company.data" class="dropdown-item">Data</a>
 
                             </div>
                         </div>
-                        <a href="/pesan" class="nav-item nav-link">Pesan</a>
+                        <a href="Company.pesan" class="nav-item nav-link">Pesan</a>
                     </div>
                     <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Setting</a>
                 </div>

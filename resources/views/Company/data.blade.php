@@ -56,23 +56,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="/" class="nav-item nav-link">Dashboard</a>
+                        <a href="/company" class="nav-item nav-link">Dashboard</a>
                         <a href="/login" class="nav-item nav-link">Login</a>
 
                          <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Form</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/partner" class="dropdown-item">Partner</a>
+                                <a href="Company.partner" class="dropdown-item">Partner</a>
                             </div>
                         </div>
 
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Analisis</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/data" class="dropdown-item active">Data</a>
+                                <a href="Company.data" class="dropdown-item active">Data</a>
                             </div>
                         </div>
-                        <a href="/pesan" class="nav-item nav-link">Pesan</a>
+                        <a href="Company.pesan" class="nav-item nav-link">Pesan</a>
                     </div>
                     <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Setting</a>
                 </div>
@@ -139,7 +139,7 @@
 
 
         <!-- CONTENT Start -->
-        
+
         <!-- CONTENT End -->
 
 
