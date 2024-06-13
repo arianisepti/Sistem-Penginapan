@@ -224,10 +224,12 @@
                   </tr>
               </thead>
               <tbody>
-
+                @php
+                $id = 1;
+                @endphp
                 @foreach ($data as $item)
             <tr>
-                <td>1</td>
+                <td>{{ $id++ }}</td> <!-- $id yang kita tambahkan setiap kali iterasi melalui loop foreach. Variabel ini digunakan untuk menampilkan ID yang berurutan dari 1 sampai akhir. -->
                 <td>{{ $item->nampart }}</td>
                 <td>{{ $item->bkontrak }}</td>
                 <td>{{ $item->alamat }}</td>
