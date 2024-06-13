@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nampart');
             $table->date('bkontrak');
             $table->string('alamat');
-            $table->integer('notel');
+            $table->bigInteger('notel');
             $table->timestamps();
         });
     }
