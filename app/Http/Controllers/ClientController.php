@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\partner;
+use App\Models\profile;
 
 class ClientController extends Controller
 {
     function client()
     {
-        return view('client');
+        $profiles = profile::latest()->paginate(20);
+        return view('client', compact('profiles'));
         
     }
     function company()

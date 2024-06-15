@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\partnerController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\Authenticate;
@@ -34,12 +35,20 @@ use App\Http\Kernel;
 
     });
 
-
-
     Route::get('/client', [ClientController::class, "client"])->middleware(['auth', 'userAkses:client']);
     Route::get('/company', [ClientController::class, "company"])->middleware(['auth', 'userAkses:company']);
     Route::post('/company', [ClientController::class,"company"]);
     Route::get('/logout', [HomeController::class, "logout"]);
 
+    Route::group(['middleware' => 'auth', 'userAkses:client'], function () {
+       
+        Route::get('/profile', [ProfileController::class, "index"]);
+        Route::get('/profile/create', [ProfileController::class, "create"]);
+        Route::get('/profile/update', [ProfileController::class, "update"]);
+        Route::resource('/profile', ProfileController::class);
+    
+
+    });
 
 
+   

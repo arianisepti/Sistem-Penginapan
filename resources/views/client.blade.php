@@ -63,14 +63,21 @@
             href="client-index.html"
             class="navbar-brand d-flex align-items-center text-center"
           >
-            <div class="icon p-2 me-2">
+          @forelse ($profiles as $profile)
+            <div class="icon p-0 me-2">
               <img
-                class="img-fluid"
-                src="{{asset('Reservasi/img2/Font Dan Symbol/Untitled-2.png')}}"
+                class="img-fluid m-0"
+                src="{{ asset('/storage/Reservasi/'.$profile->image) }}"
                 alt="Icon"
-                style="width: 30px; height: 30px"
+                style="width: 40px; height: 40px"
               />
             </div>
+              @empty
+              <div class="alert alert-danger">
+                  tidak ada foto
+              </div>
+              @endforelse
+           
             <h1 class="m-0 text-danger">{{ auth()->user()->name }}</h1>
           </a>
           <button
@@ -119,7 +126,7 @@
               </div>
               <a href="client-contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="profil.html" class="btn btn-primary px-3 d-none d-lg-flex"
+            <a href="{{ route('profile.index') }}" class="btn btn-primary px-3 d-none d-lg-flex"
               >My Profile</a
             >
           </div>

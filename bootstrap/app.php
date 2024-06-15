@@ -16,8 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // $middleware->alias([RedirectIfAuthenticated::class, 'guest']); // Menggunakan metode alias
-        // $middleware->alias([Authenticate::class, 'Auth']); // Menggunakan metode alias
+        
         $middleware->alias([
            'userAkses' => UserAkses::class,]); // Menggunakan metode alias
 
