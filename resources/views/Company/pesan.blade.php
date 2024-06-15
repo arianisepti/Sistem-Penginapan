@@ -69,37 +69,16 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Analisis</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="/data" class="dropdown-item">Data</a>
+                                <a href="Company.data" class="dropdown-item">Data</a>
                             </div>
                         </div>
-                        <a href="/pesan" class="nav-item nav-link active">Pesan</a>
+                        <a href="Company.pesan" class="nav-item nav-link active">Pesan</a>
                     </div>
                     <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Setting</a>
                 </div>
             </nav>
         </div>
         <!-- Navbar End -->
-
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Contact Us</h1>
-                        <nav aria-label="breadcrumb animated fadeIn">
-                        <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Page</a></li>
-                            <li class="breadcrumb-item text-body active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="{{asset('Reservasi/img/carousel-1.jpg')}}" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
 
 
         <!-- Search Start -->
@@ -139,7 +118,7 @@
 
 
         <!-- Contact Start -->
-        
+
         <!-- Contact End -->
 
 

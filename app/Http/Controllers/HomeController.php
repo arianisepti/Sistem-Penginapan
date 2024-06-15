@@ -26,6 +26,9 @@ class HomeController extends Controller
     public function contact(){
         return view("contact");
     }
+    public function book(){
+        return view("book");
+    }
 
     public function signin(Request $request)
     {

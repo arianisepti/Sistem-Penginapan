@@ -19,11 +19,11 @@ use App\Http\Kernel;
     Route::post('/login', [HomeController::class,"signin"]);
     Route::get('/register', [HomeController::class,"register"]);
     Route::post('/create', [HomeController::class,"create"]);
+    Route::get('/b', [HomeController::class,"book"]);
 
 
-    
 
-   
+
 
     Route::group(['middleware' => 'auth', 'userAkses:company'], function () {
         Route::get('/company', [ClientController::class, "company"]);
@@ -31,7 +31,7 @@ use App\Http\Kernel;
         Route::resource('/company', partnerController::class);
         Route::get('/company', [partnerController::class, 'index']);
         Route::post('/partner/store', [partnerController::class, 'store'])->name('partner.store');
-    
+
 
     });
 

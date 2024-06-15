@@ -470,7 +470,11 @@
                       <div
                         class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
                       >
-                        For Sell
+                      <div class="container mt-5">
+                      <div class="d-flex justify-content-center">
+                      <a herf="/b" class="btn btn-primary mx-2">For Sell</a>
+                      </div>
+                      </div>
                       </div>
                       <div
                         class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
@@ -560,7 +564,11 @@
                       <div
                         class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
                       >
-                        For Sell
+                      <div class="container mt-5">
+                        <div class="d-flex justify-content-center">
+                          <a herf="/b" class="btn btn-primary mx-2">For Sell</a>
+                        </div>
+                      </div>
                       </div>
                       <div
                         class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
@@ -650,7 +658,11 @@
                       <div
                         class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"
                       >
-                        For Sell
+                      <div class="container mt-5">
+                        <div class="d-flex justify-content-center">
+                          <a herf="/b" class="btn btn-primary mx-2">For Sell</a>
+                        </div>
+                      </div>
                       </div>
                       <div
                         class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3"
