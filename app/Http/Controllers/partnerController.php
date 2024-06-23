@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\partner;
+use App\Models\profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -15,7 +16,11 @@ class partnerController extends Controller
     public function index()
     {
         $data = partner::orderBy('nampart', 'desc')->get();
+
+       
         return view('Company.partner', compact('data'));
+       
+        
     }
 
     /**
@@ -23,6 +28,7 @@ class partnerController extends Controller
      */
     public function create()
     {
+       
         return view('Company.company');
     }
 

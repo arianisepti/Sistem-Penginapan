@@ -18,7 +18,8 @@ class ClientController extends Controller
     function company()
     {
         $data = partner::orderBy('nampart', 'desc')->get();
-        return view('Company.company', compact('data'));
+        $profiles = profile::orderBy('image', 'desc')->get();
+        return view('Company.company', compact('data', 'profiles'));
         
     }
 }

@@ -243,6 +243,65 @@
 
               </tbody>
           </table>
+
+
+           <!-- CONTENT -->
+      <main class="container">
+        <center> <h1> Data Client </h1> </center>
+        <!-- START DATA -->
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+          <!-- FORM PENCARIAN -->
+
+          <div class="pb-3">
+            @if (Session::has('success'))
+            <div class="pt-3">
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            </div>
+            @endif
+            <form class="d-flex" action="" method="get">
+                <input class="form-control me-1" type="search" name="katakunci" value="{{ Request::get('katakunci') }}" placeholder="Masukkan kata kunci" aria-label="Search">
+                <button class="btn btn-secondary" type="submit">Cari</button>
+            </form>
+          </div>
+        <div>
+          <table class="min-w-full bg-white">
+              <thead>
+                  <tr>
+                      <th class="col-md-1">Foto Profil</th>
+                      <th class="col-md-1">Nama</th>
+                      <th class="col-md-1">Email</th>
+                      <th class="col-md-1">Jenis Kelamin </th>
+                      <th class="col-md-1">Tanggal Lahiir</th>
+                      <th class="col-md-1">ALamat</th>
+                      <th class="col-md-1">Telepon</th>
+                  </tr>
+              </thead>
+              <tbody>
+               
+            @forelse ($profiles as $items)
+            <tr>
+                
+                <td class="text-center"><img src="{{ asset('/storage/Reservasi/'.$items->image) }}" class="rounded" style="width: 150px"></td>
+                <td>{{ $items->name }}</td>
+                <td>{{ $items->email }}</td>
+                <td>{{ $items->gender }}</td>
+                <td>{{ $items->birth }}</td>
+                <td>{{ $items->address }}</td>
+                <td>{{ $items->phone }}</td>
+            
+            </tr>
+            @empty
+            <div class="alert alert-danger">
+                tidak ada Data
+            </div>
+                @endforelse
+
+              </div>
+
+              </tbody>
+          </table>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         </main>
