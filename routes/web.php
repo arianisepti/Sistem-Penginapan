@@ -5,9 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\partnerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\Authenticate;
-use App\Http\Kernel;
+use App\Http\Controllers\ReservationController;
 
 
 
@@ -45,6 +43,10 @@ use App\Http\Kernel;
         Route::get('/profile', [ProfileController::class, "index"]);
         Route::get('/profile/create', [ProfileController::class, "create"]);
         Route::get('/profile/update', [ProfileController::class, "update"]);
+        Route::get('/booking', [ReservationController::class, 'index'])->name('booking.index');;
+        Route::get('/booking/create', [ReservationController::class, 'create']);
+        Route::post('/booking', [ReservationController::class, 'store'])->name('booking.store');
+        Route::resource('/booking', ReservationController::class);
         Route::resource('/profile', ProfileController::class);
     
 

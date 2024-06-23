@@ -124,7 +124,7 @@
                   >
                 </div>
               </div>
-              <a href="client-contact.html" class="nav-item nav-link">Contact</a>
+              <a href="{{ URL::to('/booking') }}" class="nav-item nav-link">Booking</a>
             </div>
             <a href="{{ route('profile.index') }}" class="btn btn-primary px-3 d-none d-lg-flex"
               >My Profile</a

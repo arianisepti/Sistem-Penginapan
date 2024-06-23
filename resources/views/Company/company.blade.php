@@ -71,7 +71,7 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
               <a href="/company" class="nav-item nav-link active">Dashboard</a>
-              <a href="/login" class="nav-item nav-link">Login</a>
+             
 
 
                <div class="nav-item dropdown">
@@ -403,17 +403,7 @@
               <h5 class="text-white mb-4">Newsletter</h5>
               <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
               <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
+                <a class="btn btn-primary py-3 px-5 mt-3" name="logout" href="logout">Logout</a>
               </div>
             </div>
           </div>

@@ -126,6 +126,6 @@ class ProfileController extends Controller
         }
 
         //redirect to index
-        return redirect()->route('profile.index')->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->back()->with(['success' => 'Data Berhasil Diubah!']);
     }
 }
