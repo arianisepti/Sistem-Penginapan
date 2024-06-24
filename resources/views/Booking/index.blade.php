@@ -135,12 +135,9 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" name="rooms" required>
-                                                <option value="" selected hidden>no of rooms</option>
-                                                <option value="1" {{ old('rooms') == 1 ? 'selected' : '' }}>1</option>
-                                                <option value="2" {{ old('rooms') == 2 ? 'selected' : '' }}>2</option>
-                                                <option value="3" {{ old('rooms') == 3 ? 'selected' : '' }}>3</option>
-                                            </select>
+                                            <button type="button" onclick="decreaseValue('rooms')">-</button>
+                                            <input type="number" name="rooms" id="rooms" value="{{ old('rooms') ?? 1 }}" min="1" required>
+                                            <button type="button" onclick="increaseValue('rooms')">+</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Rooms</span>
                                             @error('rooms')
@@ -150,12 +147,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" name="adults" required>
-                                                <option value="" selected hidden>no of adults</option>
-                                                <option value="1" {{ old('adults') == 1 ? 'selected' : '' }}>1</option>
-                                                <option value="2" {{ old('adults') == 2 ? 'selected' : '' }}>2</option>
-                                                <option value="3" {{ old('adults') == 3 ? 'selected' : '' }}>3</option>
-                                            </select>
+                                            <button type="button" onclick="decreaseValue('adults')">-</button>
+                                            <input type="number" name="adults" id="adults" value="{{ old('adults') ?? 1 }}" min="1" required>
+                                            <button type="button" onclick="increaseValue('adults')">+</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Adults</span>
                                             @error('adults')
@@ -165,12 +159,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <select class="form-control" name="children" required>
-                                                <option value="" selected hidden>no of children</option>
-                                                <option value="0" {{ old('children') == 0 ? 'selected' : '' }}>0</option>
-                                                <option value="1" {{ old('children') == 1 ? 'selected' : '' }}>1</option>
-                                                <option value="2" {{ old('children') == 2 ? 'selected' : '' }}>2</option>
-                                            </select>
+                                            <button type="button" onclick="decreaseValue('children')">-</button>
+                                            <input type="number" name="children" id="children" value="{{ old('children') ?? 0 }}" min="0" required>
+                                            <button type="button" onclick="increaseValue('children')">+</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Children</span>
                                             @error('children')
@@ -231,6 +222,25 @@
                 }
             }
         });
+
+
+        function decreaseValue(id) {
+            var input = document.getElementById(id);
+            var value = parseInt(input.value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value > input.min) {
+                value--;
+                input.value = value;
+            }
+        }
+
+        function increaseValue(id) {
+            var input = document.getElementById(id);
+            var value = parseInt(input.value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            input.value = value;
+        }
     </script>
 
 @if(session('success'))

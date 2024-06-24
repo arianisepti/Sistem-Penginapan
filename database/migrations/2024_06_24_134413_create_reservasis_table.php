@@ -21,6 +21,9 @@ return new class extends Migration
             $table->integer('children');
             $table->string('email');
             $table->string('phone');
+            $table->string('status')->default('pending'); 
+            $table->string('payment_method')->nullable();
+            $table->decimal('total_amount', 10, 2)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reservasis');
+        Schema::table('reservasis', function (Blueprint $table) {
+            $table->dropColumn('status');
+            $table->dropColumn('payment_method');
+            $table->dropColumn('total_amount');
+        });
     }
 };

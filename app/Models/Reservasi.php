@@ -18,5 +18,8 @@ class Reservasi extends Model
         'children',
         'email',
         'phone',
+        'status',
+        'payment_method',
+        'total_amount',
     ];
 }

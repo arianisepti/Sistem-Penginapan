@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\partnerController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationController;
@@ -47,6 +48,11 @@ use App\Http\Controllers\ReservationController;
         Route::get('/booking/create', [ReservationController::class, 'create']);
         Route::post('/booking', [ReservationController::class, 'store'])->name('booking.store');
         Route::resource('/booking', ReservationController::class);
+       
+        Route::post('/booking/status/{id}', [ReservationController::class, 'updateStatus'])->name('updateStatus');
+        Route::get('/booking/payment-options/{reservationId}', [PaymentController::class, 'showPaymentOptions'])->name('showPaymentOptions');
+        Route::post('/booking/create-bill/{reservationId}', [PaymentController::class, 'createBill'])->name('createBill');
+        Route::get('/booking/bill/{reservationId}', [PaymentController::class, 'showBill'])->name('showBill');
         Route::resource('/profile', ProfileController::class);
     
 

@@ -206,6 +206,68 @@
       </div>
       <!-- Search End -->
 
+      
+           <!-- CONTENT -->
+           <main class="container">
+            <center> <h1> Data Client </h1> </center>
+            <!-- START DATA -->
+            <div class="my-3 p-3 bg-body rounded shadow-sm">
+              <!-- FORM PENCARIAN -->
+    
+              <div class="pb-3">
+                @if (Session::has('success'))
+                <div class="pt-3">
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                </div>
+                @endif
+                <form class="d-flex" action="" method="get">
+                    <input class="form-control me-1" type="search" name="katakunci" value="{{ Request::get('katakunci') }}" placeholder="Masukkan kata kunci" aria-label="Search">
+                    <button class="btn btn-secondary" type="submit">Cari</button>
+                </form>
+              </div>
+            <div>
+              <table class="min-w-full bg-white">
+                  <thead>
+                      <tr>
+                          <th class="col-md-1">Destinasi</th>
+                          <th class="col-md-1">Check-In</th>
+                          <th class="col-md-1">Check-Out</th>
+                          <th class="col-md-1">Tindakan </th>
+                          
+                      </tr>
+                  </thead>
+                  <tbody>
+                   
+                    @foreach ($reservasis as $reservasi)
+                    <tr>
+                        <td>{{ $reservasi->destination }}</td>
+                        <td>{{ $reservasi->check_in }}</td>
+                        <td>{{ $reservasi->check_out }}</td>
+                       
+                        <td>
+                            <form action="{{ route('updateStatus', $reservasi->id) }}" method="POST">
+                                @csrf
+                                <select name="status" onchange="this.form.submit()">
+                                    <option value="pending" {{ $reservasi->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                                    <option value="cancel" {{ $reservasi->status == 'cancel' ? 'selected' : '' }}>Cancel</option>
+                                    <option value="proceed" {{ $reservasi->status == 'proceed' ? 'selected' : '' }}>Lanjutkan Pembayaran</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+    
+                  </div>
+    
+                  </tbody>
+              </table>
+            </div>
+
+
+     
+
       <!-- Category Start -->
       <div class="container-xxl py-5">
         <div class="container">

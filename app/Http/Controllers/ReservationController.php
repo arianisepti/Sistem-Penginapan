@@ -20,6 +20,25 @@ class ReservationController extends Controller
         return view('Booking.index', compact('reservasis'));
     }
 
+
+    public function updateStatus(Request $request, $id) : RedirectResponse
+    {
+        $request->validate([
+            'status' => 'required|in:pending,cancel,proceed',
+        ]);
+
+        $reservasi = Reservasi::findOrFail($id);
+        $reservasi->status = $request->status;
+        $reservasi->save();
+
+        if ($request->status == 'proceed') {
+            return redirect()->route('showPaymentOptions', $reservasi->id);
+        }
+
+        return redirect()->back()->with('success', 'Status reservasi berhasil diperbarui!');
+    }
+
+
     public function create() : view
     {
         return view('Booking.index');
