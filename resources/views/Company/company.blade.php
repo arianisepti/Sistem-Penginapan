@@ -308,6 +308,56 @@
         <!-- AKHIR DATA -->
         <!-- END CONTENT -->
 
+
+         <!-- CONTENT -->
+         <main class="container">
+          <center> <h1> History Reservasi Client </h1> </center>
+          <!-- START DATA -->
+          <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <!-- FORM PENCARIAN -->
+  
+            <div class="pb-3">
+              @if (Session::has('success'))
+              <div class="pt-3">
+                  <div class="alert alert-success">
+                      {{ Session::get('success') }}
+                  </div>
+              </div>
+              @endif
+              <form class="d-flex" action="" method="get">
+                  <input class="form-control me-1" type="search" name="katakunci" value="{{ Request::get('katakunci') }}" placeholder="Masukkan kata kunci" aria-label="Search">
+                  <button class="btn btn-secondary" type="submit">Cari</button>
+              </form>
+            </div>
+          <div>
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="col-md-1">Destinasi</th>
+                        <th class="col-md-1">Check-In</th>
+                        <th class="col-md-1">Check-Out</th>
+                        <th class="col-md-1">Status</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                 
+                  @foreach ($reservasis as $reservasi)
+                  <tr>
+                      <td>{{ $reservasi->destination }}</td>
+                      <td>{{ $reservasi->check_in }}</td>
+                      <td>{{ $reservasi->check_out }}</td>
+                      <td>{{ $reservasi->status }}</td>
+                
+                  </tr>
+              @endforeach
+  
+                </div>
+  
+                </tbody>
+            </table>
+          </div>
+
       <!-- Footer Start -->
       <div
         class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"

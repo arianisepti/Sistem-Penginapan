@@ -22,8 +22,9 @@ class ClientController extends Controller
     {
         $data = partner::orderBy('nampart', 'desc')->get();
         $profiles = profile::orderBy('image', 'desc')->get();
+        $reservasis = Reservasi::latest()->paginate(20);
        
-        return view('Company.company', compact('data', 'profiles'));
+        return view('Company.company', compact('data', 'profiles', 'reservasis'));
         
     }
 }

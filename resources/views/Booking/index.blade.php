@@ -133,11 +133,11 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <button type="button" onclick="decreaseValue('rooms')">-</button>
-                                            <input type="number" name="rooms" id="rooms" value="{{ old('rooms') ?? 1 }}" min="1" required>
                                             <button type="button" onclick="increaseValue('rooms')">+</button>
+                                            <input type="number" name="rooms" id="rooms" value="{{ old('rooms') ?? 1 }}" min="1" required>
+                                            <button type="button" onclick="decreaseValue('rooms')">-</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Rooms</span>
                                             @error('rooms')
@@ -145,11 +145,11 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <button type="button" onclick="decreaseValue('adults')">-</button>
-                                            <input type="number" name="adults" id="adults" value="{{ old('adults') ?? 1 }}" min="1" required>
                                             <button type="button" onclick="increaseValue('adults')">+</button>
+                                            <input type="number" name="adults" id="adults" value="{{ old('adults') ?? 1 }}" min="1" required>
+                                            <button type="button" onclick="decreaseValue('adults')">-</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Adults</span>
                                             @error('adults')
@@ -157,11 +157,11 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <button type="button" onclick="decreaseValue('children')">-</button>
-                                            <input type="number" name="children" id="children" value="{{ old('children') ?? 0 }}" min="0" required>
                                             <button type="button" onclick="increaseValue('children')">+</button>
+                                            <input type="number" name="children" id="children" value="{{ old('children') ?? 0 }}" min="0" required>
+                                            <button type="button" onclick="decreaseValue('children')">-</button>
                                             <span class="select-arrow"></span>
                                             <span class="form-label">Children</span>
                                             @error('children')

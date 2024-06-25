@@ -209,7 +209,7 @@
       
            <!-- CONTENT -->
            <main class="container">
-            <center> <h1> Data Client </h1> </center>
+            <center> <h1> History Reservasi </h1> </center>
             <!-- START DATA -->
             <div class="my-3 p-3 bg-body rounded shadow-sm">
               <!-- FORM PENCARIAN -->
@@ -234,6 +234,7 @@
                           <th class="col-md-1">Destinasi</th>
                           <th class="col-md-1">Check-In</th>
                           <th class="col-md-1">Check-Out</th>
+                          <th class="col-md-1">Status</th>
                           <th class="col-md-1">Tindakan </th>
                           
                       </tr>
@@ -245,6 +246,7 @@
                         <td>{{ $reservasi->destination }}</td>
                         <td>{{ $reservasi->check_in }}</td>
                         <td>{{ $reservasi->check_out }}</td>
+                        <td>{{ $reservasi->status }}</td>
                        
                         <td>
                             <form action="{{ route('updateStatus', $reservasi->id) }}" method="POST">
