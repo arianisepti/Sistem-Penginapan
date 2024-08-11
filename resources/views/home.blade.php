@@ -460,7 +460,7 @@
                 <div class="position-relative">
                   <img
                     class="img-fluid"
-                    src="{{asset('Reservasi/img2/Person/person 1.jpg')}}"
+                    src=""
                     alt=""
                   />
                   <div
